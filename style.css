@@ -63,8 +63,8 @@ header .container{
     border:0;
     outline:0;
     background-color: transparent;
-    font-weight:100;
-    width:100%;
+    font-weight:400;
+    width: 100%;
     font-size:14px;
     
 }
@@ -88,6 +88,7 @@ header .container{
     width: 18px;
     
 }
+
 .search-bar .search-input{
     width:100%;
 }
@@ -169,8 +170,12 @@ width:285px;
     justify-content: space-between;
 }
 
+    
 .title .category-name{
-    font-weight: var(--fw-700);
+    font-weight: var(--fw-600);
+    color: rgb(28, 28, 28);
+    font-size: 24px;
+    
 }
 
 .title a{
@@ -184,19 +189,19 @@ width:285px;
     column-gap:12px;
     overflow: auto scroll;
 
+
 }
 
-.list-items::-webkit-scrollbar{
-    display: none;
-}
+
 .list-items .item{
-    
+    position: relative;
     width:200px;
     border: 0.5px solid rgb(232, 232, 232);
     box-shadow:rgba(0, 0, 0, 0.04) 2px 2px 8px;
     border-radius:8px;
     padding:5px;
-    margin-bottom: 20px;
+    margin: 0 0 20px 0;
+    background-color: var(--color-white);
 }
 .item .item-img img{
     width: 140px;
@@ -215,17 +220,27 @@ width:285px;
     width:36%;
 }
 .item-details .item-name{
-    font-size:12px;
-    font-weight:800;
+    font-size :13px;
+    font-weight:var(--fw-600);
+    height:30px;
+    overflow: hidden;
+    color: rgb(31,31,31);
+    margin:4px;
 }
 .item-details .item-weight{
-    font-size:10px;
+    font-size:12px;
     color: var(--color-grey);
+    margin:4px;
 }
 .item-price{
+   
+    bottom:4px;
     display:flex;
     justify-content: space-between;
     align-items:center;
+    margin:4px;
+    
+    
     
 }
 
@@ -236,6 +251,7 @@ width:285px;
 }
 
 .item-price button{
+    
     font-size: 10px;
     text-transform: uppercase;
     font-weight: var(--fw-800);
@@ -253,6 +269,7 @@ width:285px;
     padding:20px;
     position: relative;
     background-color:var(--color-grey2) ;
+    margin:10px;
 
 }
 
@@ -260,4 +277,58 @@ width:285px;
     color:red;
     margin:0px 4px;
     padding-top: 5px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+@media screen and (min-width:320px) and (max-width:480px) {
+    header .container{
+        justify-content: start;
+    }
+
+    .logo{
+        padding: 2px;
+    }
+    .location{
+        padding:5px 2px;
+        margin-top: 10px;
+        margin-left: 50px;
+    }
+    .location .location-time{
+        font-size: 12px;
+        font-weight: 400;
+        width:150px;
+    }
+    .location .placedown{
+        display: flex;
+        padding: 0 0 2px ;
+        margin-bottom : 10 px;
+    }
+    .placedown .place{
+        
+        
+        font-size: 10px;
+        font-weight: var(--fw-400);
+        margin-bottom: 20px;
+    }
+    
+    .down .fa-sort-down{
+        transform: translateY(-6px);
+        padding-left:8px;
+       width:8px;
+    }
+
+    .search-bar{
+        margin-left: 0px;
+        padding:0 4px;
+        width:150px;
+    }
+
+    .footer{
+        display: flex;
+        width:400px;
+        align-items: center;
+        text-align: center;
+    }
 }
